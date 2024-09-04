@@ -22,15 +22,30 @@ import os
 os.system("cls")
 
 print("select random numbers")
-x = int(input("x: ")) #input has to be type converted before you make calculations otherwise it will throw it in as a string
-y = int(input("y: "))
+
+while True:
+    try:
+        x = int(input("x: "))           #input has to be type converted before you make calculations otherwise it will throw it in as a string
+        y = int(input("y: "))
+        break
+    except:
+        print("my guy, i said NUMBERS")
+        continue
+        
 
 print(x * y)
 
 print("=" * 90)
+
 print("please input your weight and height")
-weight = float(input("weight (in kg): "))
-height = float(input("height (in M): "))
+while True:
+    try:
+        weight = float(input("weight (in kg): "))
+        height = float(input("height (in M): "))
+        break
+    except:
+        print("bro, you serious right now?")
+        continue
 
 bmi = weight / height ** 2
 
@@ -47,7 +62,15 @@ weight_in_lbs = Kg * 2.20462262
 print("\n", "also your weight in lbs is: ", weight_in_lbs)
 
 print("=" * 90)
-current_age = int(input("insert your age: "))
+
+while True:
+    try:
+        current_age = int(input("insert your age: "))
+        break
+    except:
+        print("PUT IN A NUMBER, COME ON")
+        continue
+
 
 age_in_weeks = current_age * 52.176
 

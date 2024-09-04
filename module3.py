@@ -26,7 +26,13 @@ elif age == 15:
 baldur_online = True
 
 if baldur_online:
-    height = float(input("height (in M): "))
+    while True:
+        try:
+            height = float(input("height (in M): "))
+            break
+        except: 
+            print("you goober, put in your height! IN NUMBERS MAN")
+            continue
     
     if height >= 1.2 and height <= 1.99:
         print("you can ride baldur!")
@@ -36,5 +42,7 @@ if baldur_online:
         print("ya short fuc, GO HOME!")
 else: 
     print("we're closed man, come back later!")
+
+
 
 
