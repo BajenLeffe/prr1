@@ -9,14 +9,14 @@ boolean = true/false    flag for on and off
 
 deklare/initiate
 
-"""
+
 
 #initate (name of the variable and data type)
 name = "" #string
 value = 1.3 #float
 value2 = 8 #integer
 value3 = 8.1 #float
-check = False #boolean
+check = False #boolean"""
 
 import os
 os.system("cls")
