@@ -29,7 +29,7 @@ while True:
         y = int(input("y: "))
         break
     except:
-        print("my guy, i said NUMBERS")
+        print("my guy, i said NUMBERS TRY AGAIN")
         continue
         
 
