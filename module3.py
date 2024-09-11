@@ -5,27 +5,39 @@ os.system('cls')
 
 print("=" * 90)
 
-age = int(input("please enter your age: "))
-if age >= 18:
-    print("you can go to the pub!")
+while True:
+    try:
+        age = int(input("please enter your age: "))
+        if age >= 18:
+            print("you can go to the pub!")
+            
 
-else:
-    print("you're too young! wait until you're 18! haha!")
+        else:
+            print("you're too young! wait until you're 18! haha!")
+            break
 
-if age == 18:
-    print('you are exactly old enough to go to the pub')
+        if age == 18:
+            print('you are exactly old enough to go to the pub')
+            break
 
-elif age > 18:
-    print("you're over 18!")
+        elif age > 18:
+            print("you're over 18! GO NUTS")
+            break
 
-elif age == 17:
-    print("i'm sorry bro")
+        elif age == 17:
+            print("i'm sorry bro")
+            break
 
-elif age < 15:
-    print("MINOR ALERT! GET LOST!")
+        elif age < 15:
+            print("MINOR ALERT! GET LOST!")
+            break
 
-elif age == 15:
-    print("meeeeeh, i'm iffy about you..")
+        elif age == 15:
+            print("meeeeeh, i'm iffy about you..")
+            break
+    except:
+        print("please.. for the love of god put in a number...")
+        continue
 
 baldur_online = True
 
@@ -61,6 +73,7 @@ while random_number != 6:
 
 print("=" * 90)
 print("you're going to measure the area of a circle!")
+
 pi = pi
 
 while True:
@@ -87,11 +100,9 @@ while True:
         print("ENTER A NUMBER, HOW MANY TIMES DO I HAVE TO TELL YOU?!")
         continue
 
+counter = amount
 
-
-counter = 0
-while counter < amount:
+while counter > 0:
     dice = randint(1,6)
     print(dice)
-    counter = counter+1
-
+    counter -= 1
