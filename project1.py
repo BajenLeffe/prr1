@@ -14,7 +14,7 @@ os.system('cls')
 
 while True:
     print("=" * 90)
-    print(bcolors.PURPLE+"Welcome to the game of Guess the number!" "\n" "You get 7 tries! Go ahead!"+bcolors.DEFAULT) #bcolors är en hjälpklass för att lägga färger på text i programmet
+    print(bcolors.PURPLE+"Welcome to the game of Guess the number!" "\n" "You get 7 tries! Go ahead!" "\n" "wanna quit? press 0"+bcolors.DEFAULT) #bcolors är en hjälpklass för att lägga färger på text i programmet
 
     tries = 1
     number = randint(1,100) #väljer ett random tal mellan 1-100
@@ -27,8 +27,12 @@ while True:
         except:
             print(bcolors.RED+"You sure that you put in a number there pal?"+bcolors.DEFAULT) #finns i fall någon skriver en bokstav
             continue
+
+        if guess == 0:
+            print("calling it quits?")
+            break
         
-        if guess > number:
+        elif guess > number:
             print(bcolors.CYAN+"Your guess is larger than the real number!"+bcolors.DEFAULT) #om man gissar för högt
 
         elif guess < number:
@@ -37,6 +41,10 @@ while True:
         elif guess == number:
             print(bcolors.GREEN+"YAY YOU GOT IT!"+bcolors.DEFAULT) #om man får rätt
             break
+
+        
+
+
 
         
         tries += 1 #tickar på variabeln med 1 så den bryts efter 5 försök
