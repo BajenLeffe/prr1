@@ -41,11 +41,6 @@ while True:
         elif guess == number:
             print(bcolors.GREEN+"YAY YOU GOT IT!"+bcolors.DEFAULT) #om man får rätt
             break
-
-        
-
-
-
         
         tries += 1 #tickar på variabeln med 1 så den bryts efter 5 försök
 
