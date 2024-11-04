@@ -27,7 +27,7 @@ print("=" * 90)
 
 
 
-name = "your mom"
+name = input()
 
 for letter in name:
     print(letter)
