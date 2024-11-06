@@ -28,6 +28,10 @@ while True:
         print("you did it!")
         break
 
+string = "korkisligan"
 
+print(string[:10])
     
+string2 = input("give a short sentence: ")
 
+print(string2[:10]+"...")
