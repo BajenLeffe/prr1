@@ -2,6 +2,8 @@ import os
 from random import randint
 os.system('cls')
 
+print("=" * 90)
+
 while True:
     prompt = input("give a number: ")
     
@@ -15,6 +17,8 @@ while True:
 
 number = randint(0,10)
 
+print("=" * 90)
+
 while True:
     guess = input("guess a number between 0 and 10 or press Q to exit: ")
 
@@ -27,6 +31,8 @@ while True:
     elif int(guess) == number:
         print("you did it!")
         break
+
+print("=" * 90)
 
 string = "korkisligan"
 

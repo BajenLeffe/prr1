@@ -1,6 +1,6 @@
 
 '''
-project1.PY: program som handlar om att man ska gissa ett tal från 1-100 med 7 gissningar och får man det rätt så vinner man
+project1guessnumber.py: program som handlar om att man ska gissa ett tal från 1-100 med 7 gissningar och får man det rätt så vinner man
 
 __author__  = "Alessandro Muller"
 __version__ = "1.0.0"
