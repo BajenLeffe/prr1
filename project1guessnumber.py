@@ -10,9 +10,9 @@ __email__   = "alessandro.muller@elev.ga.ntig.se"
 import os
 from random import randint
 from colors import bcolors
-os.system('cls')
 
 while True:
+    os.system('cls')
     print("=" * 90)
     print(bcolors.PURPLE+"Welcome to the game of Guess the number (1-100)!" "\n" "You get 7 tries! Go ahead!" "\n" "wanna quit? press 0"+bcolors.DEFAULT) #bcolors är en hjälpklass för att lägga färger på text i programmet
 
