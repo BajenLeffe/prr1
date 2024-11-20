@@ -15,7 +15,7 @@ while True:
         print("try again pal")
 
 
-number = randint(0,10)
+number = randint(0,11)
 
 print("=" * 90)
 
