@@ -6,7 +6,7 @@ my_numbers = [1, 2, 3, 4, 5, 6 ,7]
 for number in my_numbers:
     print(number)
 
-"""
+
 names = ["malek", "korkis", "fagerberg"]
 names.append("hojanna")
 
@@ -29,4 +29,3 @@ while True:
     delete = input("\nwhich one?: ")
     if delete:
         names.pop(int(delete))
-"""
