@@ -6,7 +6,7 @@ my_numbers = [1, 2, 3, 4, 5, 6 ,7]
 for number in my_numbers:
     print(number)
 
-
+"""
 names = ["malek", "korkis", "fagerberg"]
 names.append("hojanna")
 
@@ -17,7 +17,7 @@ while True:
     for name in names:
         print(name)
 
-    new_name = input("add name?: ")
+    new_name = input("\nadd name?: ")
 
     names.append(new_name)
 
@@ -26,7 +26,7 @@ while True:
 
     print("\nwant to remove?")
 
-    delete = input("which one?: ")
+    delete = input("\nwhich one?: ")
     if delete:
         names.pop(int(delete))
-
+"""
