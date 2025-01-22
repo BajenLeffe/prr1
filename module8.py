@@ -66,7 +66,7 @@ while True:
         newname = input("enter the name: ")
         editnamelist(namelist, oldname, newname)
     elif choice == "e":
-        print("endig program.")
+        print("ending program.")
         break
     else:
         print("wrong choice.")
