@@ -53,8 +53,8 @@ while True:
     for i, name in enumerate(namelist):
         print(f"{i}: {name}")
 
-    choice = input("Do you want to [A]dd till, [R]emove, [C]hange ett namn eller [E]nd? ").lower()
-
+    choice = input("Do you want to [A]dd, [R]emove, [C]hange a name or [E]nd? ").lower()
+    
     if choice == "a":
         name = input("give a name to add: ")
         addnamelist(namelist, name)
