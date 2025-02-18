@@ -60,17 +60,18 @@ while True:
         os.system('cls') #rensar skärmen så att det inte blir klottrat
         
         print(bcolors.PURPLE+"\nAktuell lista:"+bcolors.DEFAULT)
-        for i, name in enumerate(namelist): #visar aktuell lista
+        for i, name in enumerate(namelist): #visar aktuell lista med nummer
             print(f"{i}: {name}")
 
         print("=" * 90)
-        choice = input("\nDo you want to [A]dd, [R]emove, [C]hange a name or [E]nd? ").lower() #här får användaren bestämma vad hen vill göra
+        print("\nDo you want to \nA. Add a name \nB.Remove a name \nC. Change a name \nD. End? ")
+        choice = input("\nEnter your choice from A-D: ").lower() #här får användaren bestämma vad hen vill göra
 
         if choice == "a": #om användaren vill lägga till ett namn tas hen till denna del
             name = input(bcolors.CYAN+"Give a name to add: "+bcolors.DEFAULT)
             addnamelist(namelist, name)
 
-        elif choice == "r": #om användaren vill ta bort ett namn tas hen till denna del
+        elif choice == "b": #om användaren vill ta bort ett namn tas hen till denna del
             try:
                 index = int(input(bcolors.YELLOW+"Give the index of the name to be removed: "+bcolors.DEFAULT))
                 removenamelist(namelist, index)
@@ -82,7 +83,7 @@ while True:
             newname = input("Enter the new name: ")
             editnamelist(namelist, oldname, newname)
 
-        elif choice == "e": #om användaren vill avsluta programmet tas hen till denna del
+        elif choice == "D": #om användaren vill avsluta programmet tas hen till denna del
             print(bcolors.RED+"Ending program."+bcolors.DEFAULT)
             exit()
 
