@@ -83,6 +83,7 @@ while True:
                 index = int(input(bcolors.YELLOW+"Give the index of the name to be removed: "+bcolors.DEFAULT))
 
                 removenamelist(namelist, index)
+                
             except: #finns för att förhindra error eller krasch
                 print(bcolors.RED+"please enter a number"+bcolors.DEFAULT)
 
