@@ -64,9 +64,11 @@ while True:
 
         for i, name in enumerate(namelist): #visar aktuell lista med nummer
             print(f"{i}: {name}")
+        
+        print(f"\namount of names: {len(namelist)}") #visar antal namn i listan
 
         
-        print("\nDo you want to \nA. Add a name \nB.Remove a name \nC. Change a name \nD. End? ")
+        print("\nDo you want to \nA. Add a name \nB. Remove a name \nC. Change a name \nD. End? ")
 
         print("=" * 90)
 
