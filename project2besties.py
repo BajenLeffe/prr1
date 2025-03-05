@@ -48,9 +48,9 @@ def removenamelist(list, index): #funktion för att ta bort namn
         list.pop(index)
 
 def editnamelist(name_list, oldfirst, newfirst): #funktion för att ändra namn
-    index = name_list.index(oldfirst)  #hittar vilket index/nummer namnet har
+    if 0 <= index < len(name_list):  #hittar vilket index/nummer namnet har
 
-    name_list[index] = newfirst  #byter ut med nya namnet
+        name_list[index] = newfirst  #byter ut med nya namnet
 
     
 namelist = [] #här läggs alla namn till
@@ -62,7 +62,7 @@ while True:
 
         print(bcolors.PURPLE+"\nCurrent list:"+bcolors.DEFAULT)
 
-        for i, name in enumerate(namelist): #visar aktuell lista med nummer
+        for i, name in enumerate(namelist, start=1): #visar aktuell lista med nummer
             print(f"{i}: {name}")
         
         print(f"\namount of names: {len(namelist)}") #visar antal namn i listan
@@ -82,22 +82,28 @@ while True:
 
         elif choice == "b": #om användaren vill ta bort ett namn tas hen till denna del
             try:
-                index = int(input(bcolors.YELLOW+"Give the index of the name to be removed: "+bcolors.DEFAULT))
-
+                index = int(input(bcolors.YELLOW + "Give the number of the name to be removed: " + bcolors.DEFAULT)) -1
                 removenamelist(namelist, index)
-                
-            except: #finns för att förhindra error eller krasch
-                print(bcolors.RED+"please enter a number"+bcolors.DEFAULT)
-
+            except:
+                print(bcolors.RED + "Please enter a valid number." + bcolors.DEFAULT)
+ 
         elif choice == "c": #om användaren vill ändra ett namn tas hen till denna del
-            oldname = input("Which name do you want to change?: ")
-            
-            newname = input("Enter the new name: ")
-            editnamelist(namelist, oldname, newname)
+            try: #kollar om man har skrivit rätt
+                index = int(input("Which number do you want to change?: ")) - 1
+            except: #om man har skrivit fel
+                print(bcolors.RED + "Please enter a valid number." + bcolors.DEFAULT)
 
+            if 0 <= index < len(namelist):
+                    newname = input("Enter the new name: ")
+                    editnamelist(namelist, index, newname)
+            else:
+                    print(bcolors.RED + "Invalid number. Please select a valid number from the list." + bcolors.DEFAULT)
+
+            
         elif choice == "d": #om användaren vill avsluta programmet tas hen till denna del
             print(bcolors.RED+"Ending program...."+bcolors.DEFAULT)
             exit()
 
         else: #om användaren råkar skriva fel tas hen till denna del
             print(bcolors.RED+"Wrong choice."+bcolors.DEFAULT)
+
