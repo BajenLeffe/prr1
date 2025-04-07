@@ -25,7 +25,7 @@ print("select random numbers")
 
 while True:
     try:
-        x = int(input("x: "))           #input has to be type converted before you make calculations otherwise it will throw it in as a string
+        x = int(input("x: "))  #input has to be type converted before you make calculations otherwise it will throw it in as a string
         y = int(input("y: "))
         break
     except:
