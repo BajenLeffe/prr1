@@ -18,7 +18,7 @@ while True:
     print(bcolors.PURPLE + "Welcome to the game of Guess the number (1-100)!" "\n" "You get 7 tries! Go ahead!" "\n" "Wanna quit? Press 0" + bcolors.DEFAULT)
 
     tries = 1
-    number = randint(1, 100)
+    number = randint(1, 9)
 
     while tries <= 7:
         print("Tries:", tries)
