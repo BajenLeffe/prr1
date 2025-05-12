@@ -72,3 +72,12 @@ def show_start_screen():
     print("       N = Nytt spel, Q = Avsluta")
     print("====================================")
 
+def print_stats(stats):
+    print("\n=== Statistik ===")
+    print(f"Vunnit: {stats['wins']}")
+    print(f"Förlorat: {stats['losses']}")
+    print(f"Oavgjort: {stats['draws']}")
+    print(f"Totalt antal ronder: {stats['total']}")
+    print("=================")
+
+
