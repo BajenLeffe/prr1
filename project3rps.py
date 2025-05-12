@@ -74,10 +74,10 @@ def show_start_screen():
 
 def print_stats(stats):
     print("\n=== Statistik ===")
-    print(f"Vunnit: {stats['wins']}")
-    print(f"Förlorat: {stats['losses']}")
-    print(f"Oavgjort: {stats['draws']}")
-    print(f"Totalt antal ronder: {stats['total']}")
+    print(f"Won: {stats['wins']}")
+    print(f"Lost: {stats['losses']}")
+    print(f"Tie: {stats['draws']}")
+    print(f"tTotal rounds: {stats['total']}")
     print("=================")
 
 
