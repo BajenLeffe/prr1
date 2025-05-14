@@ -21,6 +21,9 @@ funktion som tar emot spelarens val och jämför med datorns val:
 
 funktion som visar statistiken:
 
+huvudloop med allt:
+  printa statistik varje gång():
+  
 
 
 
@@ -65,19 +68,41 @@ ASCIIchar = {
 """
 }
 
-def show_start_screen():
+stats= {'wins': 0, 'losses': 0, 'draws': 0, 'total': 0}
+
+def start_screen():
     os.system('cls')
-    print("=== Välkommen till STEN SAX PÅSE ===")
+    print("=== Welcome to Rock Paper Scissors! ===")
     print("Tryck: R = Rock, P = Paper, S = Scissors")
-    print("       N = Nytt spel, Q = Avsluta")
+    print("       N = New game, Q = Quit")
     print("====================================")
 
-def print_stats(stats):
-    print("\n=== Statistik ===")
+def show_stats(stats):
+    print("\n=== Statistics ===")
     print(f"Won: {stats['wins']}")
     print(f"Lost: {stats['losses']}")
     print(f"Tie: {stats['draws']}")
-    print(f"tTotal rounds: {stats['total']}")
+    print(f"Total rounds: {stats['total']}")
     print("=================")
+
+def computer_choice():
+    return random.choice(['R', 'P', 'S'])
+
+def show_result(player, computer):
+  if player == computer:
+    return 'draw!'
+  
+  elif (player == 'R' and computer == 'S') or\
+    (player == 'P' and computer == 'R') or\
+    (player == 'S' and computer == 'P'):
+      return 'win!'
+  
+  else:
+    return 'loss!'
+ 
+os.system('cls')
+
+start_screen()
+
 
 
