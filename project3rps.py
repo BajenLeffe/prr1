@@ -34,81 +34,18 @@ huvudloop med allt:
 
 """
 
-import random
 from msvcrt import getwch
 import os
 from colors import bcolors
+import project3modules
 
 os.system('cls')
 
-ASCIIchar = {
-    "R":"""
-    _________
-   |   |  |  \__
-   /¨¨¨¨===  |  |
-  /    ___/__|__|
- |    /         |
-  \____ROCK_____/
-""",
-    "S":"""
-  __       __
-  \  \   /  /
-   \  \ /  /
-    \  V  /__ __
-   /¨¨¨¨===  |  |
-  /    ___/__|__|
- |    /         |
-  \__SCISSORS___/
-
-""",
-    "P":"""
-     __ __ __
-    |  |  |  |__
-    |¨¨|¨¨|¨¨|  |
- __ |¨¨|¨¨|¨¨|¨¨|
- \ \|  |  |  |¨¨|
- |  \__         |
- |              |
-  \____PAPER____/
-
-"""
-}
-
 stats= {'wins': 0, 'losses': 0, 'draws': 0, 'total': 0}
-
-def start_screen():
-    os.system('cls')
-    print(bcolors.PURPLE+"=== Welcome to Rock Paper Scissors! ===")
-    print("Tryck: R = Rock, P = Paper, S = Scissors")
-    print("       N = New game, Q = Quit")
-    print("===================================="+bcolors.DEFAULT)
-
-def show_stats(stats):
-    print(bcolors.CYAN+"\n=== Statistics ===")
-    print(f"Won: {stats['wins']}")
-    print(f"Lost: {stats['losses']}")
-    print(f"Tie: {stats['draws']}")
-    print(f"Total rounds: {stats['total']}")
-    print("================="+bcolors.DEFAULT)
-
-def computer_choice():
-    return random.choice(['R', 'P', 'S'])
-
-def show_result(player, computer):
-  if player == computer:
-    return 'draw!'
-  
-  elif (player == 'R' and computer == 'S') or\
-    (player == 'P' and computer == 'R') or\
-    (player == 'S' and computer == 'P'):
-    return 'win!'
-  
-  else:
-    return 'loss!'
  
 os.system('cls')
 
-start_screen()
+project3modules.start_screen()
 
 while True:
     print("\nYour choice (R/P/S), N to restart, Q to quit:")
@@ -116,20 +53,20 @@ while True:
 
     if choice in ['R', 'P', 'S']:
         os.system('cls')
-        computer = computer_choice()
-        result = show_result(choice, computer)
+        project3modules.computer = project3modules.computer_choice()
+        project3modules.result = project3modules.show_result(choice, project3modules.computer)
         stats['total'] += 1
 
         print(bcolors.GREEN+"\nYou chose:"+bcolors.DEFAULT)
-        print(bcolors.GREEN+ASCIIchar[choice]+bcolors.DEFAULT)
+        print(bcolors.GREEN+project3modules.ASCIIchar[choice]+bcolors.DEFAULT)
         print(bcolors.RED+"The AI chose:"+bcolors.DEFAULT)
-        print(bcolors.RED+ASCIIchar[computer]+bcolors.DEFAULT)
+        print(bcolors.RED+project3modules.ASCIIchar[project3modules.computer]+bcolors.DEFAULT)
 
-        if result == 'win!':
+        if project3modules.result == 'win!':
             stats['wins'] += 1
             print(bcolors.GREEN+"YOU WON!"+bcolors.DEFAULT)
 
-        elif result == 'loss!':
+        elif project3modules.result == 'loss!':
             stats['losses'] += 1
             print(bcolors.RED+"YOU LOST!"+bcolors.DEFAULT)
 
@@ -137,7 +74,7 @@ while True:
             stats['draws'] += 1
             print(bcolors.YELLOW+"IT'S A DRAW!"+bcolors.DEFAULT)
 
-        show_stats(stats)
+        project3modules.show_stats(stats)
 
     elif choice == 'Q':
         print(bcolors.BLUE+"\nYou better play again!! I spent way too much time working on this!"+bcolors.DEFAULT)
@@ -145,7 +82,7 @@ while True:
 
     elif choice == 'N':
         stats = {'wins': 0, 'losses': 0, 'draws': 0, 'total': 0}
-        start_screen()
+        project3modules.start_screen()
 
     
     else:
