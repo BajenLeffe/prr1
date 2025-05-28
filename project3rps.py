@@ -20,6 +20,7 @@ funktion som enbart visar startskärmen:
 funktion som tar emot spelarens val och jämför med datorns val:
 
 funktion som visar statistiken:
+(OBS! ALLA FUNKTIONER ÄR FLYTTADE TILL project3modules.py)
 
 huvudloop med allt:
   printa statistik varje gång():
