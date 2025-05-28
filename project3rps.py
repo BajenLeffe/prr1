@@ -39,14 +39,28 @@ from msvcrt import getwch
 import os
 from colors import bcolors
 import project3modules
+import time
+import random
 
 os.system('cls')
 
-stats= {'wins': 0, 'losses': 0, 'draws': 0, 'total': 0}
- 
-os.system('cls')
+stats= {'wins': 0, 
+        'losses': 0, 
+        'draws': 0, 
+        'total': 0}
+
+print("buffering")
+for i in range(random.randint(1, 5)):
+        for period in range(1, 5):
+            time.sleep(0.5)
+            os.system("cls")
+            print("buffering" + "." * period)
+            
+os.system("cls")
 
 project3modules.start_screen()
+
+start = time.time()
 
 while True:
     print("\nYour choice (R/P/S), N to restart, Q to quit:")
@@ -78,7 +92,15 @@ while True:
         project3modules.show_stats(stats)
 
     elif choice == 'Q':
-        print(bcolors.BLUE+"\nYou better play again!! I spent way too much time working on this!"+bcolors.DEFAULT)
+        end = time.time()
+        seconds = end - start
+        print()
+        os.system("cls")
+        for i in range(random.randint(1, 5)):
+            for period in range(1, 5):
+                time.sleep(0.5)
+                os.system("cls")
+                print(f"you did {seconds:.2f} seconds of playtime though! see you later!")
         break
 
     elif choice == 'N':
@@ -88,5 +110,6 @@ while True:
     
     else:
         print(bcolors.RED+"Invalid option ya dog, CHOOSE AGAIN!"+bcolors.DEFAULT)
+
 
 
