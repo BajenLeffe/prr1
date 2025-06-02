@@ -49,7 +49,7 @@ stats= {'wins': 0,
         'draws': 0, 
         'total': 0}
 
-print("buffering")
+print("buffering") #lite för att vara jobbig
 for i in range(random.randint(1, 5)):
         for period in range(1, 5):
             time.sleep(0.5)
@@ -62,7 +62,7 @@ project3modules.start_screen()
 
 start = time.time()
 
-while True:
+while True: #huvudloop
     print("\nYour choice (R/P/S), N to restart, Q to quit:")
     choice = getwch().upper()
 
@@ -96,7 +96,7 @@ while True:
         seconds = end - start
         print()
         os.system("cls")
-        for i in range(random.randint(1, 5)):
+        for i in range(random.randint(1, 5)): #används bara för att ha den se ut lite mer rolig ut
             for period in range(1, 5):
                 time.sleep(0.5)
                 os.system("cls")

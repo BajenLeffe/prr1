@@ -52,7 +52,7 @@ def show_stats(stats):
     print("================="+bcolors.DEFAULT)
 
 def computer_choice():
-    return random.choice(['R', 'P', 'S'])
+    return random.choice(['R', 'P', 'S']) #här väljer datorn mellan sten, sax och påse med random
 
 def show_result(player, computer):
   if player == computer:
@@ -60,7 +60,7 @@ def show_result(player, computer):
   
   elif (player == 'R' and computer == 'S') or\
     (player == 'P' and computer == 'R') or\
-    (player == 'S' and computer == 'P'):
+    (player == 'S' and computer == 'P'): #samlade ihop alla dessa för att slippa lägga in en massa elif-satser
     return 'win!'
   
   else:
